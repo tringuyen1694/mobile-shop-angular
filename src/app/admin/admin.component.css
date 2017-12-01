@@ -1,0 +1,19 @@
+
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948 !important;
+    /* green */
+  }
+  
+  .ng-invalid:not(form) {
+    border-left: 5px solid #a94442 !important;
+    /* red */
+  }
+  
+  input.ng-invalid.ng-touched {
+    border: 2px solid red;
+  }
+  
+  .header {
+    text-align: center;
+    margin-top: 60px;
+  }
