@@ -5,11 +5,15 @@ import { ProductsDetailComponent } from './products-detail/products-detail.compo
 import { ProductsRoutingModule } from './products-routing.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HttpModule } from '@angular/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
+    HttpModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NgxPaginationModule,
     ProductsRoutingModule
   ],
   declarations: [

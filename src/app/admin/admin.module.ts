@@ -5,26 +5,16 @@ import { HeaderComponent } from './layout/header.component';
 import { AdminComponent } from './admin.component';
 import { ProductsModule } from './products/products.module';
 import { ProductsService } from '../shared/services/products.service';
-import { ProductsListComponent } from './products/products-list/products-list.component';
-import { ProductsDetailComponent } from './products/products-detail/products-detail.component';
-import { HttpModule } from '@angular/http';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule,
-    ReactiveFormsModule,
-    FormsModule,
     AdminRoutingModule,
-    NgxPaginationModule
+    ProductsModule
   ],
   declarations: [
     HeaderComponent,
-    AdminComponent,
-    ProductsListComponent,
-    ProductsDetailComponent
+    AdminComponent
   ],
   providers: [ProductsService]
 })

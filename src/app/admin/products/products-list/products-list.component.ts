@@ -69,7 +69,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   gotoDetail(id) {
-    this.router.navigate(['/products', id]);
+    this.router.navigate(['admins/products', id]);
   }
 
   addnew() {
@@ -84,8 +84,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   onCreate(): void {
-    this.productsService.create(this.createPro.value).then(cus => {
-      if (cus.code == "200")
+    this.productsService.create(this.createPro.value).then(() => {
         this.getAll();
     });
     this.createPro.reset();
