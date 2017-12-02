@@ -10,10 +10,16 @@ const adminRoutes: Routes = [
     path: '',
     component: AdminComponent,
     children: [
-      { 
-        path: 'products', 
-        component: ProductsListComponent },
-      { path: 'products/:id', component: ProductsDetailComponent }
+      {
+        path: 'home', component: AdminComponent
+      },
+      {
+        path: 'products',
+        loadChildren: 'app/admin/products/products.module#ProductsModule'
+      },
+      {
+        path: '**', redirectTo: 'home'
+      }
     ]
   }
 ];

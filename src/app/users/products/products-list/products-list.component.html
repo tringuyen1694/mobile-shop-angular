@@ -67,13 +67,13 @@
                   <div class="col-md-4 col-sm-4 col-xs-12" *ngFor="let product of products">
                     <div class="product-item">
                       <div class="product-img">
-                        <a (click)="gotoDetail(product.productId)">
+                        <a routerLink = "/products/{{product.productId}}">
                           <img src="assets/img/product/{{product.image}}" alt="" style="height: 300px"/>
                         </a>
                       </div>
                       <div class="product-info">
                         <h6 class="product-title">
-                          <a (click)="gotoDetail(product.productId)">{{product.productName}}</a>
+                          <a routerLink = "/products/{{product.productId}}">{{product.productName}}</a>
                         </h6>
                         <div class="pro-rating">
                           <a href="#">

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ViewEncapsulation } from '@angular/core';
 import { Products } from '../../../shared/model/products.model';
 import { ProductsService } from '../../../shared/services/products.service';
 import { Router } from '@angular/router';
@@ -8,7 +8,7 @@ import { PaginationInstance } from 'ngx-pagination';
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
-  styleUrls: ['../../admin.component.css']
+  styleUrls: ['./products-list.component.css', '../../admin.component.css']
 })
 export class ProductsListComponent implements OnInit {
 

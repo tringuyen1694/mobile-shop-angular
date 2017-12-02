@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/core';
 import { Products } from '../../shared/model/products.model';
 import { ProductsService } from '../../shared/services/products.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -13,12 +14,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private products: Products[];
   private product: Products;
 
-  constructor(private productsService: ProductsService) { }
+  constructor(
+    private productsService: ProductsService,
+    private router: Router
+  ) { }
 
   getAll(): void {
     this.productsService.getAll().then(res => this.products = res);
   }
-  
+
   public loadScript(url) {
     let script = document.createElement('script');
     script.src = url;
@@ -38,5 +42,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.product = product;
   }
 
+  gotoDetail(id) {
+    this.router.navigate(['/products', id]);
+  }
 }
 
