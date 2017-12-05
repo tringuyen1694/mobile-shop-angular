@@ -17,13 +17,13 @@ const usersRoutes: Routes = [
         path: 'home',
         loadChildren: 'app/users/home/home.module#HomeModule'
       },
-      { path: 'blog', component: BlogComponent },
-      { path: 'contact', component: ContactComponent },
-      { path: 'about', component: AboutComponent },
       {
         path: 'products',
         loadChildren: 'app/users/products/products.module#ProductsModule'
       },
+      { path: 'blog', component: BlogComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'about', component: AboutComponent },
       {
         path: '**', redirectTo: 'home'
       }

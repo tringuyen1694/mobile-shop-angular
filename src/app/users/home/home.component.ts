@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   ) { }
 
   getAll(): void {
-    this.productsService.getAll().then(res => this.products = res);
+    this.productsService.getAll().then(res => this.products = res.sort((a, b) => {return b.productId - a.productId}));
   }
 
   public loadScript(url) {

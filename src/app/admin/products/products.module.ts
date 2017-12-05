@@ -6,6 +6,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
-    ProductsRoutingModule
+    ProductsRoutingModule,
+    CKEditorModule
   ],
   declarations: [
     ProductsListComponent,

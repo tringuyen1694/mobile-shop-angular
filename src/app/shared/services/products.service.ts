@@ -6,7 +6,6 @@ import { environment } from '../../../environments/environment.prod';
 @Injectable()
 export class ProductsService {
 
-  private url = 'http://localhost:8080/api/products';
   private headers = new Headers({ 'Content-Type': 'application/json' });
 
   constructor(private http: Http) { }

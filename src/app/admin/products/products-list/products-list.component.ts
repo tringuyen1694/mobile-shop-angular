@@ -27,6 +27,7 @@ export class ProductsListComponent implements OnInit {
   private searchControl = new FormControl();
 
   private productId: number;
+  private ckeditorContent;
 
   public config: PaginationInstance = {
     id: 'custom',
@@ -39,10 +40,10 @@ export class ProductsListComponent implements OnInit {
     private productsService: ProductsService,
     private fb: FormBuilder,
     private router: Router
-  ) { }
+  ) { this.ckeditorContent = `<p>My HTML</p>`; }
 
   getAll(): void {
-    this.productsService.getAll().then(res => this.products = res);
+    this.productsService.getAll().then(res => this.products = res.sort((a, b) => {return b.productId - a.productId}));
   }
 
   // search(): void {

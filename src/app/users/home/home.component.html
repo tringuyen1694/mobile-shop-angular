@@ -121,7 +121,7 @@
                 <h6 class="product-title">
                   <a routerLink = "/products/{{product.productId}}">{{product.productName}}</a>
                 </h6>
-                <h6 class="brand-name">{{product.brandName}}</h6>
+                <h6 class="brand-name">{{product.category?.name}}</h6>
                 <h3 class="pro-price">{{product.amount | number:'3.0-5'}} VND</h3>
               </div>
               <ul class="action-button">
@@ -272,7 +272,7 @@
                     <h6 class="product-title">
                       <a routerLink = "/products/{{product.productId}}">{{product.productName}}</a>
                     </h6>
-                    <h6 class="brand-name">{{product.brandName}}</h6>
+                    <h6 class="brand-name">{{product.category?.name}}</h6>
                     <h3 class="pro-price">{{product.amount | number:'3.0-5'}} VND</h3>
                   </div>
                   <ul class="action-button">
