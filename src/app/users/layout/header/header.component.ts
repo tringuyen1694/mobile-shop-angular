@@ -7,18 +7,13 @@ import { Component, OnInit, ViewEncapsulation, AfterViewInit } from '@angular/co
 	encapsulation: ViewEncapsulation.None
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
+	constructor() { }
 
-	public loadScript(url) {
-		let script = document.createElement('script');
-		script.src = url;
-		document.body.appendChild(script);
-	  }
-	
-	  ngOnInit() {
-		
-	  }
-	
-	  ngAfterViewInit(): void {
-	  }
+	ngOnInit() {
+
+	}
+
+	ngAfterViewInit(): void {
+	}
 
 }

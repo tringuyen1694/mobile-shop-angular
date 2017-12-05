@@ -31,8 +31,7 @@ export class ProductsService {
 
   create(products) {
     return this.http.post(environment.api_url + '/products', JSON.stringify(products), { headers: this.headers })
-      .toPromise()
-      .then(res => res.json());
+      .toPromise();
   }
 
   update(products) {

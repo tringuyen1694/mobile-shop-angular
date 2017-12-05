@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
 import { FormControl, Validators, FormGroup, FormBuilder } from '@angular/forms';
 import { PaginationInstance } from 'ngx-pagination';
 
+
+
 @Component({
   selector: 'app-products-list',
   templateUrl: './products-list.component.html',
@@ -17,7 +19,7 @@ export class ProductsListComponent implements OnInit {
 
   private productName = new FormControl('', [Validators.required, Validators.minLength(2), Validators.maxLength(100)]);
   private image = new FormControl();
-  private amount = new FormControl('', [Validators.required]);
+  private amount = new FormControl('', [Validators.required, Validators.pattern('\\d{2,100}')]);
   private description = new FormControl();
   private brandName = new FormControl();
 

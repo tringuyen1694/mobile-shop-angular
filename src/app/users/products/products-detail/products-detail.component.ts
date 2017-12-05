@@ -26,10 +26,9 @@ export class ProductsDetailComponent implements OnInit, AfterViewInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.productsService.getById(id).then(res => this.product = res);
-    this.loadScript('assets/js/main.js');
   }
 
   ngAfterViewInit(){
-    
+    this.loadScript('assets/js/main.js');
   }
 }

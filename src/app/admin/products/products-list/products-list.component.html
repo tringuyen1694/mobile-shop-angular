@@ -112,6 +112,7 @@
               <input type="text" class="form-control col-md-7 col-xs-12" formControlName="amount" name="amount" id="amount" placeholder="Input product amount" />
               <br/>
               <div class="col-md-12 col-xs-12 alert alert-danger" *ngIf="amount.hasError('required') && amount.touched">Amount is required</div>
+              <div class="col-md-12 col-xs-12 alert alert-danger" *ngIf="amount.hasError('pattern')">Amount is number have range 2 - 10</div>
             </div>
           </div>
           <div class="form-group">

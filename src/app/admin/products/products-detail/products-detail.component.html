@@ -1,5 +1,24 @@
-<span>
-  <h1 class="header">
-    <strong>Infomation Products</strong>
-  </h1>
-</span>
+<div class="container" *ngIf="product">
+  <h2 class="header">
+    <b> Infomation Products </b>
+  </h2>
+  <br/>
+  <div class="row">
+    <div class="col-md-6 ">
+      <button type="button" class="btn btn-default" (click)="gotoBack()">Back</button>
+    </div>
+    <div class="col-md-6">
+      <button type="button" class="btn btn-primary" routerLink="/registration/{{product.productId}}">Register</button>
+      <button type="button" class="btn btn-success" data-toggle="modal" data-target="#updateModal" (click)="edit(product)">Update</button>
+    </div>
+  </div>
+  <div class="infomation">
+    <label>Product ID:</label> {{product.productId}}
+    <br/>
+    <label>Product Name:</label> {{product.productName}}
+    <br/>
+    <label>Amount:</label> {{product.amount | number:'3.0-5'}} VND
+    <br/>
+    <label>Brand Name:</label> {{product.brandName}}
+  </div>
+</div>
